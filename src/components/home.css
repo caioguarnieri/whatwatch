@@ -1,0 +1,13 @@
+.body{
+    background-color: rgb(146, 145, 148);
+    height:100vh;
+    padding: 50px;
+    color: aliceblue;
+}
+
+.descricao{
+    display: flex;
+    text-align: left;
+    
+}
+
