@@ -1,5 +1,5 @@
 .navbar {
-    background-color: rgb(89, 40, 81);
+    background-color: #383c41;
     text-align: center;
     color: white;
     display: flex;
@@ -19,4 +19,8 @@
   
   .navbar h1:hover {
     color: rgb(55, 154, 144);
+  }
+
+  .logo{
+    width: 20%;
   }
