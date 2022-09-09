@@ -3,6 +3,7 @@ import "../components/home.css"
 const Home = () => {
   return (
     <div className="body">
+
         <div className="descricao">
         
     
