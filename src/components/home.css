@@ -1,15 +1,27 @@
 .body{   
+    background: url("../Images/backgroundpic.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: #131313;
     height:100vh;
     padding: 50px;
     color: aliceblue;
 }
 
+
 .descricao{
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(4.7px);
     color: #eb603b;
-    background-color: #131313;
+    background-color: #de000000;
     font-family: helvetica;
-    text-align: left;    
+    text-align: center;  
+    box-sizing: border-box;
+
+    
 }
 
 .givemovie { 
@@ -24,6 +36,7 @@
     animation: bn53bounce 2s infinite;
     cursor: pointer;
   }
+
 
   @keyframes bn53bounce {
     50% {transform: scale(1);}
