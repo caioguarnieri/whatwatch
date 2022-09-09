@@ -11,22 +11,32 @@
 
 .descricao{
     background: rgba(255, 255, 255, 0.24);
-    border-radius: 16px;
+    border-radius: 10px;
+    height: 200px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(4.7px);
     color: #eb603b;
     background-color: #de000000;
+    width: 90%;
+    padding: 30px;
     font-family: helvetica;
     text-align: center;  
-    box-sizing: border-box;
-
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0); 
     
+}
+
+.descricao h1 {
+    background: rgb(7, 222, 233);
+    font-size: 40px;   
+    display: inline;
 }
 
 .givemovie { 
     color: #131313;
-    background-color: #65b0e2;
+    background-color: #fddb00;
     padding: 10px;
     border-radius: 5px;
     width: 300px;
@@ -36,8 +46,8 @@
     animation: bn53bounce 2s infinite;
     cursor: pointer;
   }
-
-
+  
+  
   @keyframes bn53bounce {
     50% {transform: scale(1);}
     10% {transform: scale(1);}
