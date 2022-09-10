@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import {useParams} from "react-router-dom";
-
+import {movieLenght, moiveDirector} from "./MovieFunction";
 
 const Movie = () => {
     const [overviewTrailer, setOverviewTrailer] = useState (true);
