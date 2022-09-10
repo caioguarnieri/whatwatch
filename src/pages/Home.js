@@ -7,7 +7,7 @@ const Home = () => {
         <div className="descricao">
         
     
-        <h1> Feeling lost and looking for  <br></br> a movie to watch? <br></br>We can Help!</h1>
+        <h1> Feeling lost and looking for  <br></br> a movie to watch? <br></br>We can Help!</h1> <br/> <br/>
         
         <button className="givemovie"> GIVE ME A MOVIE ! </button>
         
