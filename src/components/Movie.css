@@ -1,0 +1,52 @@
+.flex-container {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    padding: 400px;
+    padding-top: 50px;
+    
+  }
+  
+  .poster {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 600px;
+    height: 500px;
+  }
+  
+  .movietitle{
+    font-size: xxx-large;
+    color: blueviolet;
+  }
+
+  .moviedetails{
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    border: 1px solid red;
+  }
+  
+  .content {
+    margin: auto;
+    color: rgb(0, 0, 0);
+  }
+
+.content p{
+    font-size: large;
+    font-style: italic;
+}
+
+.star{
+  margin: auto;
+  background: rgb(192, 164, 7);
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  }
+
+  .moviedescription{
+    font-size: medium;
+  }
+  

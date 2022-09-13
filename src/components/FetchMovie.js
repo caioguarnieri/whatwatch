@@ -67,7 +67,7 @@ const FetchMovie = ({setFindMovie}) => {
         }
         else {
             if(filters.totalResults === filters.visitedResults) {
-                alert('No more movies were found with tehes filters')
+                alert('No more movies were found with these filters')
             }
             else if(filters.totalPageResults === filters.visistedPageResults.length){
                 let randomPage = rollPageNumber()
