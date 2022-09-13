@@ -47,7 +47,7 @@ const Movie = () => {
   return (
     
     
-    <div className="flex-container">
+  <div className="flex-container">
      
       <img src={`https://image.tmdb.org/t/p/w500/${movie.poster}`}  alt="poster" className="poster" />
       
