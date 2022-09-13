@@ -17,6 +17,7 @@ const Home = () => {
         
         </div>
     </div>
+    
     {findMovie ? <FetchMovie setFindMovie={setFindMovie}/> : ''}
     </>
   );
