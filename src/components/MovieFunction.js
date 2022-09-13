@@ -1,12 +1,12 @@
-export function movieLength(moiveRuntime){
-    let hours = math.floor(movieRuntime / 60);
-    let minutes = moiveRuntime % 60;
+export function movieLength(movieRuntime){
+    let hours = Math.floor(movieRuntime / 60);
+    let minutes = movieRuntime % 60;
     return hours + " h " + minutes + "min";
 }
 
-export function moiveDiretor(crew) {
-    const moiveDirector = crew.find((item) => {
+export function movieDirector(crew) {
+    const movieDirector = crew.find((item) => {
         return item.job === "Director"
     })
-    return moiveDirector
+    return movieDirector
 }
