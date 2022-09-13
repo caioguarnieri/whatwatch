@@ -14,7 +14,7 @@ const Movie = () => {
     const APIKey = "f631a8de986ab2ed425533521c2003a2";
     axios
       .get(
-        `https://api.themoviedb.org/3/movie/550?api_key=${APIKey}&language=en-US`
+        `https://api.themoviedb.org/3/movie/591?api_key=${APIKey}&language=en-US`
       )
       .then((res) => {
         setMovie({
@@ -45,22 +45,25 @@ const Movie = () => {
   }, [params, setMovie]);
 
   return (
-    <div className="flex-container">
     
+    
+    <div className="flex-container">
+     
       <img src={`https://image.tmdb.org/t/p/w500/${movie.poster}`}  alt="poster" className="poster" />
       
    
      <div className="content">
       <h1 className="movietitle">{movie.name}</h1><br/>
-      
     <div className="moviedetails">
     <h3>Release Date<br/> {movie.release}</h3>
-      <h3> Rating <br/> {movie.rating} <h3 className="star">.</h3> </h3>
+      <h2> Rating <br/> {movie.rating} <h3 className="star">.</h3> </h2>
       <h3>{movie.genres}</h3>
       <h3>Lenght <br/> {movie.length}</h3>
     </div>
 
-      <p className="moviedescription">{movie.description}</p>
+      <p className="moviedescription"> <br/> {movie.description}</p>
+    
+      <button className="nextmoviebtn">NEXT MOVIE</button>
 
 
     </div>
