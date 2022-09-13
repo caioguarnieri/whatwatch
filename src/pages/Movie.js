@@ -46,17 +46,20 @@ const Movie = () => {
 
   return (
     <div className="flex-container">
-  
+    
       <img src={`https://image.tmdb.org/t/p/w500/${movie.poster}`}  alt="poster" className="poster" />
       
-
+   
      <div className="content">
       <h1 className="movietitle">{movie.name}</h1><br/>
-      <h2> Rating {movie.rating} <h2 className="star"></h2> </h2>
       
-      <h3>Release Date: {movie.release}</h3>
+    <div className="moviedetails">
+    <h3>Release Date<br/> {movie.release}</h3>
+      <h3> Rating <br/> {movie.rating} <h3 className="star">.</h3> </h3>
       <h3>{movie.genres}</h3>
-      <h3>Lenght: {movie.length}</h3>
+      <h3>Lenght <br/> {movie.length}</h3>
+    </div>
+
       <p className="moviedescription">{movie.description}</p>
 
 
