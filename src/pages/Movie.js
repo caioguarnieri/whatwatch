@@ -1,3 +1,4 @@
+import "../components/Movie.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -44,18 +45,22 @@ const Movie = () => {
   }, [params, setMovie]);
 
   return (
-    <div>
-      <img
-        src={`https://image.tmdb.org/t/p/w500/${movie.poster}`}
-        alt="Movie poster"
-      />
-      <h1>{movie.name}</h1>
-      <h2>{movie.rating}</h2>
-      <h1>{movie.release}</h1>
-      <h1>{movie.genres}</h1>
-      <h1>{movie.length}</h1>
-      <h1>{movie.description}</h1>
+    <div className="flex-container">
+  
+      <img src={`https://image.tmdb.org/t/p/w500/${movie.poster}`}  alt="poster" className="poster" />
+      
 
+     <div className="content">
+      <h1 className="movietitle">{movie.name}</h1><br/>
+      <h2> Rating {movie.rating} <h2 className="star"></h2> </h2>
+      
+      <h3>Release Date: {movie.release}</h3>
+      <h3>{movie.genres}</h3>
+      <h3>Lenght: {movie.length}</h3>
+      <p className="moviedescription">{movie.description}</p>
+
+
+    </div>
     </div>
   );
 };
