@@ -1,11 +1,10 @@
 .flex-container {
     display: flex;
     background-color: rgb(0, 0, 0);
-    padding: 400px;
-    padding-top: 10px;
+    align-items: center;
+    margin: auto;
     
   }
-  
   .nextmoviebtn {
     cursor: pointer;
     color: blue;
@@ -17,14 +16,12 @@
     text-align: center;
     align-items: center;
     font-size: larger;
-    
   }
+
   .poster {
-    border-radius: 50px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    width: 600px;
-    height: 500px;
+    width: 25rem;
+    height: 33rem;
+  
   }
   
   .movietitle{
@@ -51,7 +48,7 @@
   }
 
 .content p{
-    
+
     font-size: x-large;
     font-style: normal;
 }
