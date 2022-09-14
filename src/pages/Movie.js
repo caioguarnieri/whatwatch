@@ -14,7 +14,7 @@ const Movie = () => {
     const APIKey = "f631a8de986ab2ed425533521c2003a2";
     axios
       .get(
-        `https://api.themoviedb.org/3/movie/591?api_key=${APIKey}&language=en-US`
+        `https://api.themoviedb.org/3/movie/105?api_key=${APIKey}&language=en-US`
       )
       .then((res) => {
         setMovie({
