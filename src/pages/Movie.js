@@ -1,8 +1,9 @@
 import "../components/Movie.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { movieLength, movieDirector } from "../components/MovieFunction";
+
 
 const Movie = () => {
   const [movie, setMovie] = useState({});
@@ -12,9 +13,10 @@ const Movie = () => {
 
   useEffect(() => {
     const APIKey = "f631a8de986ab2ed425533521c2003a2";
+    const random = Math.floor(Math.random() * 1000000);
     axios
       .get(
-        `https://api.themoviedb.org/3/movie/591?api_key=${APIKey}&language=en-US`
+        `https://api.themoviedb.org/3/movie/${random}?api_key=${APIKey}&language=en-US`
       )
       .then((res) => {
         setMovie({
@@ -30,18 +32,7 @@ const Movie = () => {
           `https://api.themoviedb.org/3/movie/550?api_key=${APIKey}&language=en-US`
         );
       })
-      .then((res) => {
-        let cast = res.data.cast;
-        cast = cast.map((item) => {
-          return item.name;
-        });
-        let director = movieDirector(res.data.crew);
-        if (director === undefined) director = { name: "Unknown" };
-        setCrew({ cast: cast.join(", "), director: director });
-        return axios.get(
-          `https://api.themoviedb.org/3/movie/550?api_key=${APIKey}`
-        );
-      });
+
   }, [params, setMovie]);
 
   return (
@@ -62,9 +53,9 @@ const Movie = () => {
     </div>
 
       <p className="moviedescription"> <br/> {movie.description}</p>
-    
+      <Link to = "/Movie" >
       <button className="nextmoviebtn">NEXT MOVIE</button>
-
+      </Link>
 
     </div>
     </div>
