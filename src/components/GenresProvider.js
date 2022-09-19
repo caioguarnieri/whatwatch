@@ -82,7 +82,7 @@ export const GenresProvider = (props) => {
 
 
   return (
-    <GenresContext.Provider value = {[genres. setGenres]}>
+    <GenresContext.Provider value ={[genres.setGenres]}>
         {props.children}
     </GenresContext.Provider>
   )

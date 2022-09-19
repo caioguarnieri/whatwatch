@@ -62,9 +62,9 @@ const Movie = () => {
     </div>
 
       <p className="moviedescription"> <br/> {movie.description}</p>
-      
-      <button onClick={fetchRandomMovie} className="nextmoviebtn">NEXT MOVIE</button>
-  
+      <Link to = "/Movie" >
+      <button className="nextmoviebtn">NEXT MOVIE</button>
+      </Link>
 
     </div>
     </div>
