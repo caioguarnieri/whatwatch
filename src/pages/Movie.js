@@ -2,19 +2,18 @@ import "../components/Movie.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { movieLength, movieDirector } from "../components/MovieFunction";
-
+import { movieLength } from "../components/MovieFunction";
+import noImage from "../Images/No_Image.png";
 
 const Movie = () => {
   const [movie, setMovie] = useState({});
-  const [crew, setCrew] = useState({});
-  const [showMovie, setShowMovie] = useState(false);
+
   const params = useParams();
 
-  useEffect(() => {
+  const fetchRandomMovie = () => {
     const APIKey = "f631a8de986ab2ed425533521c2003a2";
     const random = Math.floor(Math.random() * 1000000);
-    axios
+    return axios
       .get(
         `https://api.themoviedb.org/3/movie/${random}?api_key=${APIKey}&language=en-US`
       )
@@ -27,37 +26,55 @@ const Movie = () => {
           length: movieLength(res.data.runtime),
           description: res.data.overview,
           genres: res.data.genre,
+          adult: res.data.adult,
         });
-        return axios.get(
-          `https://api.themoviedb.org/3/movie/550?api_key=${APIKey}&language=en-US`
-        );
-      })
+      });
+  };
 
-  }, [params, setMovie]);
+  useEffect(() => {
+    fetchRandomMovie();
+  }, []);
+
+  const isAdultFilm = movie.adult
+
+  useEffect(() => {
+    if (isAdultFilm) fetchRandomMovie();
+  }, [isAdultFilm]);
 
   return (
-    
-    
-  <div className="flex-container">
+    <div className="flex-container">
+      <img
+        src={`https://image.tmdb.org/t/p/w500/${movie.poster}`}
+        alt="poster"
+        className="poster"
+      />
+
+      <div className="content">
+        <h1 className="movietitle">{movie.name}</h1>
+        <br />
+        <div className="moviedetails">
+          <h3>
+            Release Date
+            <br /> {movie.release}
+          </h3>
+          <h2>
+            {" "}
+            Rating <br /> {movie.rating} <h3 className="star">.</h3>{" "}
+          </h2>
+          <h3>{movie.genres}</h3>
+          <h3>
+            Lenght <br /> {movie.length}
+          </h3>
+        </div>
+
+        <p className="moviedescription">
+          {" "}
+          <br /> {movie.description}
+        </p>
      
-      <img src={`https://image.tmdb.org/t/p/w500/${movie.poster}`}  alt="poster" className="poster" />
-      
-   
-     <div className="content">
-      <h1 className="movietitle">{movie.name}</h1><br/>
-    <div className="moviedetails">
-    <h3>Release Date<br/> {movie.release}</h3>
-      <h2> Rating <br/> {movie.rating} <h3 className="star">.</h3> </h2>
-      <h3>{movie.genres}</h3>
-      <h3>Lenght <br/> {movie.length}</h3>
-    </div>
+          <button onClick={fetchRandomMovie} className="nextmoviebtn">NEXT MOVIE</button>
 
-      <p className="moviedescription"> <br/> {movie.description}</p>
-      <Link to = "/Movie" >
-      <button className="nextmoviebtn">NEXT MOVIE</button>
-      </Link>
-
-    </div>
+      </div>
     </div>
   );
 };
