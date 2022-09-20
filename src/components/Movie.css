@@ -1,3 +1,22 @@
+#tags{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.tag {
+  color: rgb(247, 4, 4);
+  padding: 10px 20px;
+  background-color: orange;
+  border-radius: 50px;
+  margin:5px;
+  display: inline-block;
+  cursor: pointer;
+}
+
 .flex-container {
     
     display: flex;
@@ -17,6 +36,8 @@
   }
 
   .nextmoviebtn {
+
+    border-radius: 15px;
     cursor: pointer;
     color: blue;
     display: flex;
