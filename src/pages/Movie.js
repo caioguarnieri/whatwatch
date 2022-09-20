@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { movieLength, movieDirector } from "../components/MovieFunction";
-
+/*
 const genres = [{
     id: 28,
     name: "Action",
@@ -81,7 +81,7 @@ const genres = [{
 const tagsEl = document.getElementById('tags');
 let selectedGenre =[];
 
-/*setGenre();
+setGenre();
 
 function setGenre() {
 tagsEl.innerHTML= '';
