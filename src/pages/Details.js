@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 import { BsGraphUp, BsWallet2, BsHourglassSplit, BsFillFileEarmarkTextFill} from 'react-icons/bs'
 
 import MovieCard from "../components/MovieCard"
@@ -12,7 +12,8 @@ const apiKey = "f631a8de986ab2ed425533521c2003a2"
 
 const Details = () => {
     const {id} = useParams();
-    const [movie, setMovie] = useState(null)
+    const navigate = useNavigate();
+    const [movie, setMovie] = useState(null);
 
     console.log(id);
 
@@ -67,7 +68,7 @@ const Details = () => {
             </div></p>
 
         </>}
-            <button>Back</button>
+            <button onClick={() =>{navigate(-1)}}>Back</button>
     </div>
   )
 }
