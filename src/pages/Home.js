@@ -14,7 +14,7 @@ const Home = () => {
         
     
         <h1> Feeling lost and looking for  <br></br> a movie to watch? <br></br>We can Help!</h1> <br/> <br/>
-        <Link to = "/Movie" >
+        <Link to = "/movie:id" >
         <button onClick={() => setFindMovie(true)} className="givemovie"> GIVE ME A MOVIE ! </button>
         </Link>
         </div>
