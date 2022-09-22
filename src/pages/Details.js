@@ -57,7 +57,7 @@ const Details = () => {
             </div>
 
         </>}
-
+            <button>Back</button>
     </div>
   )
 }
