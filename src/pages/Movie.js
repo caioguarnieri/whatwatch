@@ -15,7 +15,7 @@ import noImage from "../Images/No_Image.png";
   const APIKey = "f631a8de986ab2ed425533521c2003a2";
   const random = Math.floor(Math.random() * 100000);
   const genreFilter = checkedToArrayNames('items');
- // document.querySelector("#testegenero").value(document.querySelector("#genreSelector").value);
+
   
   
 axios
@@ -112,30 +112,32 @@ axios
    
   return movie.adult ? <div> Loading... </div> : ( 
   
-    <><div className="checkbox">
-      <label>Action</label>   <input type="checkbox" name="items[]" value="28" />
-        <label>Adventure</label><input type="checkbox" name="items[]" value="12" />
-        <label>Animation</label><input type="checkbox" name="items[]" value="16" />
-        <label>Crime</label><input type="checkbox" name="items[]" value="80" />
-        <label>Documentary</label><input type="checkbox" name="items[]" value="99" />
-        <label>Family</label><input type="checkbox" name="items[]" value="10751" />
-        <label>Fantasy</label><input type="checkbox" name="items[]" value="14" />
-        <label>History</label><input type="checkbox" name="items[]" value="36" />
-        <label>Horror</label><input type="checkbox" name="items[]" value="27" />
-        <label>Music</label><input type="checkbox" name="items[]" value="10402" />
-        <label>Mystery</label><input type="checkbox" name="items[]" value="9648" />
-        <label>Romance</label><input type="checkbox" name="items[]" value="10749" />
-        <label>Sci-Fi</label><input type="checkbox" name="items[]" value="878" />
-        <label>Thriller</label><input type="checkbox" name="items[]" value="53" />
-        <label>War</label><input type="checkbox" name="items[]" value="10752" />
-        <label>Western</label><input type="checkbox" name="items[]" value="37" />
-        </div>
+    <><div id="checkbox">
+      <div className="box"><label>Action<br/></label><input type="checkbox" name="items[]" value="28" /></div>
+      <div className="box">  <label>Adventure<br/></label><input type="checkbox" name="items[]" value="12" /></div>
+      <div className="box">  <label>Animation<br/></label><input type="checkbox" name="items[]" value="16" /></div>
+      <div className="box"> <label>Crime<br/></label><input type="checkbox" name="items[]" value="80" /></div>
+      <div className="box"> <label>Documentary<br/></label><input type="checkbox" name="items[]" value="99" /></div>
+      <div className="box"> <label>Family<br/></label><input type="checkbox" name="items[]" value="10751" /></div>
+      <div className="box"> <label>Fantasy<br/></label><input type="checkbox" name="items[]" value="14" /></div>
+      <div className="box"> <label>History<br/></label><input type="checkbox" name="items[]" value="36" /></div>
+      <div className="box">  <label>Horror<br/></label><input type="checkbox" name="items[]" value="27" /></div>
+      <div className="box">  <label>Music<br/></label><input type="checkbox" name="items[]" value="10402" /></div>
+      <div className="box">  <label>Mystery<br/></label><input type="checkbox" name="items[]" value="9648" /></div>
+      <div className="box">  <label>Romance<br/></label><input type="checkbox" name="items[]" value="10749" /></div>
+      <div className="box">  <label>Sci-Fi<br/></label><input type="checkbox" name="items[]" value="878" /></div>
+      <div className="box">  <label>Thriller<br/></label><input type="checkbox" name="items[]" value="53" /></div>
+      <div className="box">  <label>War<br/></label><input type="checkbox" name="items[]" value="10752" /></div>
+      <div className="box"> <label>Western<br/></label><input type="checkbox" name="items[]" value="37" /></div>
+      </div>
+
 
     
       <div className="flex-container">
 
         <div className="posterdiv">
-          <img src={`https://image.tmdb.org/t/p/w500/${movie.poster}`} alt="poster" />
+          <img src={`https://image.tmdb.org/t/p/w500/${movie.poster}`} alt="poster"  />
+
         </div>
 
         <div className="content">

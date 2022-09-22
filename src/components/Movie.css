@@ -19,7 +19,7 @@
     width: 100%;
     height: 75%;
     display: flex;
-    border: solid 1px red;
+    border: solid 110px red;
   }
 
   .nextmoviebtn {
@@ -39,12 +39,34 @@
   .posterdiv{
     margin-left: 200px;
     width: 200px;
-    height: 400px;
+    height: 100px;
   }
   
-.checkbox {
-  justify-content: space-between;
+  .posterdiv img{
+    width: 400px;
+    height: 550px;
+  }
+#checkbox {
+  background-color: black;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: baseline;
+	align-content: center;
 }
+
+.box {
+  font-size: large;
+  height: fit-content;
+  width: fit-content;
+  color: rgb(0, 183, 255);
+    
+
+}
+
 
   .movietitle{
     font-size: xxx-large;
@@ -60,9 +82,10 @@
 
   
   .content {
-    width: 100%;
-    border:  solid 2px rgb(47, 231, 255);
-    margin-left: 100px;
+    
+    width: 80%;
+    height: 60%;
+    padding-left: 200px;
     margin-right: 100px;
     align-items: center;
     font-family: sans-serif;
@@ -76,8 +99,6 @@
     font-size: x-large;
     font-style: normal;
 }
-
-
 
 .star{
   
