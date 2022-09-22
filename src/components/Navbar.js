@@ -20,21 +20,26 @@ const Navbar = () => {
   }
 
   return (
-    <div className="navbar">
+    <><div className="navbar">
+
       <Link to="/">
         <img src={Logo} className="logo" alt="logo" />
       </Link>
-      <form onSubmit={handleSubmit}>
-        <input type='text'
-        placeholder="Search a movie" 
-        onChange={(e) => setSearch(e.target.value)}
-        value={search}/>
-        <button type = "submit">
-          <BiSearchAlt2 />
-        </button>
-      </form>
+
 
     </div>
+    
+    <div className="searchBox"> <form onSubmit={handleSubmit}>
+      <input type='text'
+        placeholder="Search a movie"
+        onChange={(e) => setSearch(e.target.value)}
+        value={search} />
+      <button type="submit">
+        <BiSearchAlt2 />
+      </button>
+    </form>
+
+      </div></>
   );
 };
 

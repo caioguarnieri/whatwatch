@@ -24,13 +24,13 @@ axios
       )
          .then((res) => {
 
-            let totalMovie2 = res.data.total_pages;
-            let totalPages = (totalMovie2 > 500 ) ? 500 : totalMovie2;
-            let resTest2 = Math.floor(Math.random() * totalPages);
+            let totalMovies = res.data.total_pages;
+            let totalPages = (totalMovies > 500 ) ? 500 : totalMovies;
+            let checkPagesNumber = Math.floor(Math.random() * totalPages);
             
             axios
               .get(
-                 `https://api.themoviedb.org/3/discover/movie?api_key=${APIKey}&with_genres=${genreFilter}&page=${resTest2}`
+                 `https://api.themoviedb.org/3/discover/movie?api_key=${APIKey}&with_genres=${genreFilter}&page=${checkPagesNumber}`
                   )
                  .then((res) => {
                     let totalMovie = res.data.results.length;
@@ -113,22 +113,22 @@ axios
   return movie.adult ? <div> Loading... </div> : ( 
   
     <><div id="checkbox">
-      <div className="box"><label>Action<br/></label><input type="checkbox" name="items[]" value="28" /></div>
-      <div className="box">  <label>Adventure<br/></label><input type="checkbox" name="items[]" value="12" /></div>
-      <div className="box">  <label>Animation<br/></label><input type="checkbox" name="items[]" value="16" /></div>
-      <div className="box"> <label>Crime<br/></label><input type="checkbox" name="items[]" value="80" /></div>
-      <div className="box"> <label>Documentary<br/></label><input type="checkbox" name="items[]" value="99" /></div>
-      <div className="box"> <label>Family<br/></label><input type="checkbox" name="items[]" value="10751" /></div>
-      <div className="box"> <label>Fantasy<br/></label><input type="checkbox" name="items[]" value="14" /></div>
-      <div className="box"> <label>History<br/></label><input type="checkbox" name="items[]" value="36" /></div>
-      <div className="box">  <label>Horror<br/></label><input type="checkbox" name="items[]" value="27" /></div>
-      <div className="box">  <label>Music<br/></label><input type="checkbox" name="items[]" value="10402" /></div>
-      <div className="box">  <label>Mystery<br/></label><input type="checkbox" name="items[]" value="9648" /></div>
-      <div className="box">  <label>Romance<br/></label><input type="checkbox" name="items[]" value="10749" /></div>
-      <div className="box">  <label>Sci-Fi<br/></label><input type="checkbox" name="items[]" value="878" /></div>
-      <div className="box">  <label>Thriller<br/></label><input type="checkbox" name="items[]" value="53" /></div>
-      <div className="box">  <label>War<br/></label><input type="checkbox" name="items[]" value="10752" /></div>
-      <div className="box"> <label>Western<br/></label><input type="checkbox" name="items[]" value="37" /></div>
+      <div className="box"><label>Action</label><input type="checkbox" name="items[]" value="28" /></div>
+      <div className="box">  <label>Adventure</label><input type="checkbox" name="items[]" value="12" /></div>
+      <div className="box">  <label>Animation</label><input type="checkbox" name="items[]" value="16" /></div>
+      <div className="box"> <label>Crime</label><input type="checkbox" name="items[]" value="80" /></div>
+      <div className="box"> <label>Documentary</label><input type="checkbox" name="items[]" value="99" /></div>
+      <div className="box"> <label>Family</label><input type="checkbox" name="items[]" value="10751" /></div>
+      <div className="box"> <label>Fantasy</label><input type="checkbox" name="items[]" value="14" /></div>
+      <div className="box"> <label>History</label><input type="checkbox" name="items[]" value="36" /></div>
+      <div className="box">  <label>Horror</label><input type="checkbox" name="items[]" value="27" /></div>
+      <div className="box">  <label>Music</label><input type="checkbox" name="items[]" value="10402" /></div>
+      <div className="box">  <label>Mystery</label><input type="checkbox" name="items[]" value="9648" /></div>
+      <div className="box">  <label>Romance</label><input type="checkbox" name="items[]" value="10749" /></div>
+      <div className="box">  <label>Sci-Fi</label><input type="checkbox" name="items[]" value="878" /></div>
+      <div className="box">  <label>Thriller</label><input type="checkbox" name="items[]" value="53" /></div>
+      <div className="box">  <label>War</label><input type="checkbox" name="items[]" value="10752" /></div>
+      <div className="box"> <label>Western</label><input type="checkbox" name="items[]" value="37" /></div>
       </div>
 
 
