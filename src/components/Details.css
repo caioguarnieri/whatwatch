@@ -2,15 +2,26 @@ body{
     background-color: #000;
 }
 
-
-
-
 .movie-page{
     display: flex;
+    border: 1px solid red;
     color: rgb(255, 255, 255);
-    margin: 2rem auto;
+    
 }
 
+.movie-page img{
+   margin-left: 20%;
+   display: flex;
+   width: 400px;
+   height: 600px;
+}
+
+.movieInfo {
+    
+    width: fit-content;
+    height: 100%;
+    border: solid 1px greenyellow;
+}
 .movie-page svg{
     font-size: 1.5rem;
     color: #65b0e2;
@@ -37,9 +48,7 @@ body{
     gap: 0.4rem;
 }
 
-.movie-page img {
-margin-left: 80%;
-}
+
 
 .tagline{
     text-align: center;

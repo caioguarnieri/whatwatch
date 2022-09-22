@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import { BsGraphUp, BsWallet2, BsHourglassSplit, BsFillFileEarmarkTextFill} from 'react-icons/bs'
-
+import { FaStar } from "react-icons/fa";
 import MovieCard from "../components/MovieCard"
 
 import "../components/Details.css";
 
 const moviesURL = "https://api.themoviedb.org/3/movie/"
 const apiKey = "f631a8de986ab2ed425533521c2003a2"
-
+const imageUrl = "https://image.tmdb.org/t/p/w500/";
 
 const Details = () => {
     const {id} = useParams();
@@ -40,10 +40,18 @@ const Details = () => {
   return (
     <div className="movie-page">
         {movie && <>
-         <MovieCard movie={movie} showLink={false} />
-            <p className="tagline"> {movie.tagline}
+     
+        <img src={imageUrl + movie.poster_path} alt={movie.name} />
+        <div className="movieInfo">
+         <h2> {movie.original_title} </h2>
+        <p>
+           <FaStar /> {movie.vote_average}
+        </p>
+            
+            <p className="tagline"> {movie.tagline}</p>
             
             <div className="info">
+            
                 <h3>
                     <BsWallet2 /> Budget: {formatCurrency(movie.budget)}   <BsGraphUp /> Revenue: {formatCurrency(movie.revenue)}
                 </h3>
@@ -64,8 +72,8 @@ const Details = () => {
                     <BsFillFileEarmarkTextFill /> Descritption
                 </h3>
                 <p>{movie.overview}</p>
-                
-            </div></p>
+                </div>
+            </div>
 
         </>}
             <button onClick={() =>{navigate(-1)}}>Back</button>
