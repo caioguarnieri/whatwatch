@@ -1,24 +1,11 @@
-#tags{
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 10px auto;
-}
-
-.tag {
-  color: rgb(247, 4, 4);
-  padding: 10px 20px;
-  background-color: orange;
-  border-radius: 50px;
-  margin:5px;
-  display: inline-block;
-  cursor: pointer;
+.genreSelectorBox{
+  width: 500px;
+  height: 30px;
+  color: blue;
+ 
 }
 
 .flex-container {
-    
     display: flex;
     background-color: rgb(0, 0, 0);
     height: 100vh;
@@ -36,7 +23,6 @@
   }
 
   .nextmoviebtn {
-
     border-radius: 10px;
     cursor: pointer;
     color: blue;
@@ -50,12 +36,15 @@
     font-size: larger;
   }
 
-  
-  .poster img {
-    border-radius: 15px;
-    width: 400px;
-    height: 600px;
+  .posterdiv{
+    margin-left: 200px;
+    width: 200px;
+    height: 400px;
   }
+  
+.checkbox {
+  justify-content: space-between;
+}
 
   .movietitle{
     font-size: xxx-large;
@@ -72,7 +61,7 @@
   
   .content {
     width: 100%;
-    border:  solid 2px greenyellow;
+    border:  solid 2px rgb(47, 231, 255);
     margin-left: 100px;
     margin-right: 100px;
     align-items: center;
@@ -87,6 +76,8 @@
     font-size: x-large;
     font-style: normal;
 }
+
+
 
 .star{
   
