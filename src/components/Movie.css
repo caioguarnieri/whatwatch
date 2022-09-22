@@ -1,5 +1,11 @@
+.genreSelectorBox{
+  width: 500px;
+  height: 30px;
+  color: blue;
+ 
+}
+
 .flex-container {
-    
     display: flex;
     background-color: rgb(0, 0, 0);
     height: 100vh;
@@ -17,6 +23,7 @@
   }
 
   .nextmoviebtn {
+    border-radius: 10px;
     cursor: pointer;
     color: blue;
     display: flex;
@@ -29,17 +36,15 @@
     font-size: larger;
   }
 
-  .poster{
-    width: 25rem;
-    height: 33rem;
-    background-image: url(https://www.publicdomainpictures.net/pictures/280000/nahled/not-found-image-15383864787lu.jpg);
+  .posterdiv{
+    margin-left: 200px;
+    width: 200px;
+    height: 400px;
   }
- 
-
-  .poster img {
-    width: 400px;
-    height: 600px;
-  }
+  
+.checkbox {
+  justify-content: space-between;
+}
 
   .movietitle{
     font-size: xxx-large;
@@ -56,7 +61,7 @@
   
   .content {
     width: 100%;
-    border:  solid 2px greenyellow;
+    border:  solid 2px rgb(47, 231, 255);
     margin-left: 100px;
     margin-right: 100px;
     align-items: center;
@@ -65,10 +70,14 @@
   }
 
 .content p{
+  padding: 25px;
+    min-height: 300px;
     text-align: justify;
     font-size: x-large;
     font-style: normal;
 }
+
+
 
 .star{
   
