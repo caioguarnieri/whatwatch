@@ -24,17 +24,19 @@ const Navbar = () => {
       <Link to="/">
         <img src={Logo} className="logo" alt="logo" />
       </Link>
-      <form onSubmit={handleSubmit}>
-        <input className="search"
-        type='text'
-        placeholder="Search a movie" 
-        onChange={(e) => setSearch(e.target.value)}
-        value={search}/>
+      
+      <div className="searchBar">
+       <form onSubmit={handleSubmit}>
+          <input className="search"
+               type='text'
+               placeholder="Search a movie" 
+               onChange={(e) => setSearch(e.target.value)}
+               value={search}/>
         <button type = "submit">
           <BiSearchAlt2 />
         </button>
       </form>
-
+      </div>
     </nav>
   );
 };
