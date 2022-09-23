@@ -58,9 +58,10 @@ const Details = () => {
             <div className="info">
             
                 <h3>
-                    <BsWallet2/>Budget: {formatCurrency(movie.budget)}   <BsGraphUp/><div></div>Revenue: {formatCurrency(movie.revenue)}
+                 <span><BsWallet2/>Budget: {formatCurrency(movie.budget)}</span>   
+                     <span><BsGraphUp/>Revenue: {formatCurrency(movie.revenue)}</span>
                 </h3>
-                <br/><br/>
+                <br/>
 
             </div>
 
