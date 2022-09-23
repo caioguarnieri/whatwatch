@@ -152,7 +152,7 @@ axios
 
           <p className="moviedescription"> {" "}<br /> {movie.description}</p>
 
-          <button onClick={fetchRandomMovie} className="nextmoviebtn">NEXT MOVIE</button>
+          <button onClick={fetchRandomMovie} className="nextmoviebtn">NEXT  MOVIE</button>
 
         </div>
       </div></>

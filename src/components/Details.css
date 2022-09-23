@@ -47,6 +47,7 @@ body{
         font-size: x-large;
         float: right;
         display:inline-flex;
+        font-weight: bold
 }
 
 .movieInfo p{
