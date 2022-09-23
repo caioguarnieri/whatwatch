@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const AdultCheck = () => {
-  return (
+  return <div>AdultCheck</div>;
+};
 
-    
-    <div>AdultCheck</div>
-  )
-}
-
-export default AdultCheck
+export default AdultCheck;
