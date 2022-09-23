@@ -20,7 +20,6 @@ const Details = () => {
     const getMovie = async(url) => {
         const res = await fetch(url);
         const data = await res.json();
-
         setMovie (data);
     }
 
@@ -37,25 +36,31 @@ const Details = () => {
         getMovie(movieURL)
     },[id]);
 
+
   return (
+    
     <div className="movie-page">
+    
         {movie && <>
      
         <img src={imageUrl + movie.poster_path} alt={movie.name} />
+        
         <div className="movieInfo">
-         <h2> {movie.original_title} </h2>
-        <p>
-           <FaStar /> {movie.vote_average}
-        </p>
+        <button className="backbtn"  onClick={() =>{navigate(-1)}}>Back</button>
+         <h2> {movie.original_title} </h2> 
+            <p> <br/>
             
-            <p className="tagline"> {movie.tagline}</p>
+            <h3 className="star">.</h3> {movie.vote_average}
+        </p>
+        <br/><br/>
+            <p className="tagline"> " {movie.tagline} "</p>
             
             <div className="info">
             
                 <h3>
-                    <BsWallet2 /> Budget: {formatCurrency(movie.budget)}   <BsGraphUp /> Revenue: {formatCurrency(movie.revenue)}
+                    <BsWallet2/>Budget: {formatCurrency(movie.budget)}   <BsGraphUp/><div></div>Revenue: {formatCurrency(movie.revenue)}
                 </h3>
-                <p></p>
+                <br/><br/>
 
             </div>
 
@@ -63,21 +68,19 @@ const Details = () => {
                 <h3>
                     <BsHourglassSplit /> Duration: {movie.runtime} Minutes  -  Release date: {movie.release_date}
                 </h3>
-                
-                
             </div>
-
+            <br/><br/>
             <div className="info3">
-                <h3>
-                    <BsFillFileEarmarkTextFill /> Descritption
-                </h3>
+                <h3><BsFillFileEarmarkTextFill /> Descritption     <br/><br/></h3>
                 <p>{movie.overview}</p>
+                
                 </div>
             </div>
 
-        </>}
-            <button onClick={() =>{navigate(-1)}}>Back</button>
-    </div>
+        </>}<br/><br/><br/><br/>
+          
+          </div>
+   
   )
 }
 
