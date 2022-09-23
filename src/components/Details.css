@@ -1,27 +1,69 @@
 body{
-    background-color: #000;
+    background-color: rgb(0, 0, 0);
 }
 
 .movie-page{
+    margin-top: 100px;
+    display: inline-flex;   
     display: flex;
-    border: 1px solid red;
     color: rgb(255, 255, 255);
     
 }
 
 .movie-page img{
-   margin-left: 20%;
+   box-shadow: rgba(217, 43, 24, 0.991) 1px 2px 70px 4px;
+   border-radius: 15px;
+   margin-left: 10%;
+   margin-right: 5%;
    display: flex;
    width: 400px;
    height: 600px;
 }
 
 .movieInfo {
-    
-    width: fit-content;
+    box-shadow: rgba(24, 134, 217, 0.991) 1px 2px 70px 4px;
+    padding: 1rem;
+    border-radius: 10px;
+    color: rgb(255, 255, 255) ;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: space-between;
+    width: 75rem;
     height: 100%;
-    border: solid 1px greenyellow;
+    margin-right: 5%;
+
 }
+
+.backbtn{
+        background-color: #33baeb;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 50px;
+        cursor: pointer;
+        color: rgb(0, 0, 0);
+        width: 100px;
+        height: 50px;
+        font-size: x-large;
+        float: right;
+        display:inline-flex;
+}
+
+.movieInfo p{
+   font-size: xx-large;
+}
+
+.movieInfo h3{
+    justify-content: space-around;
+    font-size: xx-large;
+ }
+ .movieInfo h2{
+    border: 0;
+    margin-right: 0;
+    align-items: center;
+   
+    font-size: 300%;
+ }
 .movie-page svg{
     font-size: 1.5rem;
     color: #65b0e2;
@@ -49,11 +91,11 @@ body{
 }
 
 
-
 .tagline{
+    margin-bottom: 50px;
     text-align: center;
     font-size: 1.3rem;
-    padding-left: 500px;
+    
 }
 
 .movie-page h2 {
@@ -67,7 +109,7 @@ body{
 .info h3{
     margin-bottom: 1rem;
     display: flex;
-    align-items: center;
+    align-items:flex-start;
     gap: 0.5rem;
 }
 
@@ -75,21 +117,22 @@ body{
 line-height: 1.4rem;
 }
 
-.movie-page button{
-    position: relative;
-    border-radius: 10px;
-    cursor: pointer;
-    color: blue;
-    display: flex;
-    width: 300px;
-    height: 50px;
-    text-align: center;
-    align-items: center;
-    font-size: larger;
-    
-  }
+
 
   .movie-page button:hover{
-    background-color: transparent;
-    color: #65b0e2;
+    background-color: #ed4848;
+    color: #33baeb;
   }
+
+  .star{
+  
+    margin: auto;
+    background: rgb(252, 214, 0);
+    -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    }
+
+    @import url('https://css.gg/arrow-left.css');

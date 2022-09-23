@@ -143,11 +143,10 @@ axios
         <div className="content">
 
           <h1 className="movietitle">{movie.name}</h1>
-          <br />
+          
           <div className="moviedetails">
             <h3>Release Date <br /> {movie.release}</h3>
-            <h2>{" "} Rating <br /> {movie.rating} <h3 className="star">.</h3>{" "} </h2>
-            <h3>{movie.genres} TESTE GENERO</h3>
+            <h3>{" "} Rating <br /> {movie.rating} <h3 className="star">.</h3>{" "} </h3>
             <h3>Lenght <br /> {movie.length}</h3>
           </div>
 
