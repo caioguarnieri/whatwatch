@@ -210,10 +210,11 @@ const Movie = () => {
             {" "}
             <br /> {movie.description}
           </p>
-
+          <div className="divbutton">
           <button onClick={fetchRandomMovie} className="nextmoviebtn">
             NEXT MOVIE
           </button>
+          </div>
         </div>
       </div>
     </>

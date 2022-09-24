@@ -19,13 +19,12 @@
 }
 
 .nextmoviebtn {
-  background-color: rgb(255, 61, 47);
+  background-color: rgb(47, 123, 255);
   border-radius: 10px;
   cursor: pointer;
-  color: blue;
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: space-evenly;
-  margin-left: 35%;
   width: 200px;
   height: 50px;
   text-align: center;
@@ -33,6 +32,11 @@
   font-size: larger;
   font-family: Helvetica;
   font-weight: bold;
+}
+
+.divbutton {
+  display: flex;
+  justify-content: flex-end;
 }
 
 button:hover {
@@ -146,3 +150,33 @@ button:hover {
     align-items: center;
   }
 }
+
+@media screen and (max-width: 400px) {
+  
+  .flex-container {
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+  }
+  .flex-container img {
+    width: 70%;
+    height: 70%;
+  }
+
+  .content{
+    width: 80%;
+   
+  }
+
+  .moviedetails{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .divbutton{
+    justify-content: center;
+  }
+}
+
