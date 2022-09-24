@@ -6,8 +6,7 @@ import {
   BsHourglassSplit,
   BsFillFileEarmarkTextFill,
 } from "react-icons/bs";
-import { FaStar } from "react-icons/fa";
-import MovieCard from "../components/MovieCard";
+
 
 import "../components/Details.css";
 
@@ -81,8 +80,9 @@ const Details = () => {
 
             <div className="info2">
               <h3>
-                <BsHourglassSplit /> Duration: {movie.runtime} Minutes <br/><br/>Release
-                date: {movie.release_date}
+                <BsHourglassSplit /> Duration: {movie.runtime} Minutes <br />
+                <br />
+                Release date: {movie.release_date}
               </h3>
             </div>
             <br />
