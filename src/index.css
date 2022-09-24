@@ -12,10 +12,3 @@ a {
 
   transition: .5s;
 }
-
-.body{
-  margin: 1000px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
