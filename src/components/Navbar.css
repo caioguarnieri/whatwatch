@@ -6,8 +6,13 @@
   background-color: #000;
 }
 
+.navbarlogo {
+  border: solid 50x red;
+  
+}
 .logo {
-  width: 25%;
+  width: 40%;
+  height: 60%;
 }
 
 #navbar form {
@@ -48,3 +53,39 @@
   background-color: transparent;
   color: #65b0e2;
 }
+
+@media screen and (max-width: 1200px) {
+  #navbar {
+    display:contents;
+    align-items: center;
+    flex-direction: column;
+  }
+  .logo {
+    width: 40%;
+    height:45%;
+  }
+
+.searchBar {
+  display: flex;
+  width: 100%;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+}
+
+  #navbar form {
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0;
+  }
+  
+  #navbar input {
+    align-items: center;
+    justify-content:center ;
+    width: 100%;
+
+   
+  }
+}
+
