@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import Logo from "../Images/Logo.png";
+import Logo from "../Images/Logo nova resolucao.png";
 import "./Navbar.css";
 import { useState } from "react";
 
@@ -21,7 +21,9 @@ const Navbar = () => {
   return (
     <nav id="navbar">
       <Link to="/">
+      <div className="navbarlogo">
         <img src={Logo} className="logo" alt="logo" />
+        </div>
       </Link>
 
       <div className="searchBar">
