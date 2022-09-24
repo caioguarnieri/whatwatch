@@ -6,14 +6,13 @@ const imageUrl = "https://image.tmdb.org/t/p/w500/";
 
 const MovieCard = ({ movie, showLink = true }) => {
   return (
-    <div >
-      
-        <img src={imageUrl + movie.poster_path} alt={movie.name} />
-        <h2> {movie.original_title} </h2>
-        <p>
-           <FaStar /> {movie.vote_average}
-        </p>
-      
+    <div>
+      <img src={imageUrl + movie.poster_path} alt={movie.name} />
+      <h2> {movie.original_title} </h2>
+      <p>
+        <FaStar /> {movie.vote_average}
+      </p>
+
       {showLink && <Link to={`/details/${movie.id}`}>Details</Link>}
     </div>
   );

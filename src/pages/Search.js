@@ -30,9 +30,8 @@ const Search = () => {
 
   return (
     <div className="container">
-        <h2 className="title"> 
-        RESULTS FOR: <span className="query-text">{query.toUpperCase()}</span>
-        </h2>
+        <h2 className="title"> RESULTS FOR: <span className="query-text">{query.toUpperCase()}</span></h2>
+        
         <div className="movies-container">
             {movies.length === 0 && <p>Loading...</p>}
             {movies.length > 0 &&
