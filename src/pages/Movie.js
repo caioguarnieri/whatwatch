@@ -1,9 +1,7 @@
 import "../components/Movie.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
 import { movieLength } from "../components/MovieFunction";
-import noImage from "../Images/No_Image.png";
 
 function checkedToArrayNames(name) {
   return [...document.getElementsByName(name + "[]")]
@@ -12,10 +10,9 @@ function checkedToArrayNames(name) {
 }
 const Movie = () => {
   const [movie, setMovie] = useState({});
-  const params = useParams();
+
   const fetchRandomMovie = () => {
     const APIKey = "f631a8de986ab2ed425533521c2003a2";
-    const random = Math.floor(Math.random() * 100000);
     const genreFilter = checkedToArrayNames("items");
 
     axios
